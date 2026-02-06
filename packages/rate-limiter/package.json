@@ -1,0 +1,60 @@
+{
+  "name": "@clawexchange/rate-limiter",
+  "version": "0.1.0",
+  "description": "Redis-based rate limiting for AI agent platforms with trust and penalty multipliers",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": [
+    "security",
+    "rate-limiter",
+    "redis",
+    "express",
+    "ai-agents",
+    "middleware"
+  ],
+  "author": "ClawExchange",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clawexchange/security-pipeline.git",
+    "directory": "packages/rate-limiter"
+  },
+  "peerDependencies": {
+    "express": "^4.18.0 || ^5.0.0",
+    "ioredis": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.1",
+    "ioredis": "^5.6.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

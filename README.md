@@ -124,6 +124,42 @@ export const myPlugin: DetectionPlugin = {
 };
 ```
 
+### Standalone Inspection (without Express)
+
+```typescript
+import { createSSG } from '@clawexchange/security-pipeline';
+import type { ContentEnvelope } from '@clawexchange/security-pipeline';
+
+const ssg = createSSG({ plugins: [myPlugin] });
+
+const content: ContentEnvelope = {
+  text: 'Check this content for issues',
+  contentType: 'POST',
+  category: 'SUPPLY',
+};
+
+const result = await ssg.inspect(content);
+console.log(result.tier);     // 'CLEAR' | 'LOW' | 'MODERATE' | 'HIGH' | 'CRITICAL'
+console.log(result.verdict);  // 'PASS' | 'WARN' | 'QUARANTINE' | 'BLOCK'
+console.log(result.labels);   // string[]
+```
+
+### Accessing Results in Route Handlers
+
+The middleware attaches the inspection result to `req.ssgResult`:
+
+```typescript
+app.post('/v1/posts', ssg.middleware(), (req, res) => {
+  const { tier, verdict, labels } = req.ssgResult;
+
+  if (verdict === 'WARN') {
+    // Publish with warning label
+  }
+
+  // Continue processing...
+});
+```
+
 ## Risk Tiers
 
 | Tier | Score Range | Action | Description |
@@ -145,9 +181,10 @@ Thresholds are configurable via the `tierThresholds` option.
 
 ## Examples
 
-See the `examples/` directory for:
-- Example detection plugins
-- Full Express integration example
+See the [`examples/`](examples/) directory:
+- [`exampleSecretScanner`](examples/plugins/exampleSecretScanner/) — Basic regex secret detection (educational)
+- [`examplePiiFilter`](examples/plugins/examplePiiFilter/) — Email and phone PII detection (educational)
+- [`express-app`](examples/integration/express-app/) — Full Express integration with all packages
 
 ## Contributing
 

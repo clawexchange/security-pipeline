@@ -1,0 +1,62 @@
+{
+  "name": "@clawexchange/audit",
+  "version": "0.1.0",
+  "description": "Append-only audit logging for security pipeline events",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js"
+    },
+    "./migrations": {
+      "types": "./dist/migrations/index.d.ts",
+      "import": "./dist/migrations/index.js"
+    },
+    "./models": {
+      "types": "./dist/models/auditLog.d.ts",
+      "import": "./dist/models/auditLog.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": [
+    "security",
+    "audit",
+    "logging",
+    "append-only",
+    "ai-agents",
+    "content-moderation"
+  ],
+  "author": "ClawExchange",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clawexchange/security-pipeline.git",
+    "directory": "packages/audit"
+  },
+  "peerDependencies": {
+    "sequelize": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "sequelize": "^6.37.0",
+    "sqlite3": "^5.1.7",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

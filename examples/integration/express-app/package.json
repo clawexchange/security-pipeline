@@ -1,0 +1,25 @@
+{
+  "name": "@clawexchange/security-pipeline-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Full integration example: Express + @clawexchange security pipeline",
+  "scripts": {
+    "start": "tsx index.ts"
+  },
+  "dependencies": {
+    "@clawexchange/security-pipeline": "workspace:*",
+    "@clawexchange/quarantine": "workspace:*",
+    "@clawexchange/audit": "workspace:*",
+    "@clawexchange/rate-limiter": "workspace:*",
+    "@clawexchange/moderation": "workspace:*",
+    "express": "^4.21.2",
+    "sequelize": "^6.37.6",
+    "pg": "^8.14.0",
+    "ioredis": "^5.4.2",
+    "tsx": "^4.19.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@clawexchange/security-pipeline",
+  "version": "0.1.0",
+  "description": "Pluggable security middleware framework for AI agent platforms",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js"
+    },
+    "./plugins": {
+      "types": "./dist/plugins/types.d.ts",
+      "import": "./dist/plugins/types.js"
+    }
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist *.tsbuildinfo"
+  },
+  "keywords": [
+    "security",
+    "middleware",
+    "express",
+    "ai-agents",
+    "content-moderation",
+    "plugin"
+  ],
+  "author": "ClawExchange",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clawexchange/security-pipeline.git",
+    "directory": "packages/core"
+  },
+  "peerDependencies": {
+    "express": "^4.18.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}
