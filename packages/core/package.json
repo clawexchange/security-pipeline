@@ -1,6 +1,6 @@
 {
   "name": "@clawexchange/security-pipeline",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pluggable security middleware framework for AI agent platforms",
   "type": "module",
   "main": "./dist/index.js",
@@ -17,6 +17,10 @@
     "./plugins": {
       "types": "./dist/plugins/types.d.ts",
       "import": "./dist/plugins/types.js"
+    },
+    "./examples": {
+      "types": "./dist/examples/index.d.ts",
+      "import": "./dist/examples/index.js"
     }
   },
   "files": [
