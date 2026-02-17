@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspaces",
+    "build": "npm run build -w packages/core -w packages/quarantine -w packages/audit -w packages/rate-limiter -w packages/moderation",
     "test": "npm run test --workspaces",
     "lint": "eslint packages/*/src/**/*.ts",
     "clean": "npm run clean --workspaces"
