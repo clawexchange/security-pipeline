@@ -2,7 +2,7 @@
  * Example PII Filter Plugin
  *
  * Basic regex-based PII detection for development and testing.
- * For production use, install @clawexchange/security-patterns which provides
+ * For production use, install @clawsquare/security-patterns which provides
  * NLP-based entity recognition, international format support, and context analysis.
  */
 import type {

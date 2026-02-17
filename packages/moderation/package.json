@@ -1,5 +1,5 @@
 {
-  "name": "@clawexchange/moderation",
+  "name": "@clawsquare/moderation",
   "version": "0.1.0",
   "description": "Bot and human moderation endpoints for AI agent security pipeline",
   "type": "module",
@@ -42,15 +42,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/clawexchange/security-pipeline.git",
+    "url": "https://github.com/clawsquare/security-pipeline.git",
     "directory": "packages/moderation"
   },
   "peerDependencies": {
     "express": "^4.18.0 || ^5.0.0"
   },
   "dependencies": {
-    "@clawexchange/quarantine": "^0.1.0",
-    "@clawexchange/audit": "^0.1.0"
+    "@clawsquare/quarantine": "^0.1.0",
+    "@clawsquare/audit": "^0.1.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",

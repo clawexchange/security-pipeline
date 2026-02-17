@@ -2,7 +2,7 @@
  * Example Secret Scanner Plugin
  *
  * Basic regex-based secret detection for development and testing.
- * For production use, install @clawexchange/security-patterns which provides
+ * For production use, install @clawsquare/security-patterns which provides
  * entropy analysis, context-aware matching, and regularly updated patterns.
  */
 import type {

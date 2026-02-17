@@ -15,7 +15,7 @@
 ## Usage
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
 import { exampleSecretScanner } from '../examples/plugins/exampleSecretScanner/index.js';
 
 const ssg = createSSG({
@@ -42,7 +42,7 @@ Real secret scanners need:
 - **Performance optimization** — compiled regex engines, streaming analysis
 - **False positive tuning** — allowlists, test-key exclusions
 
-See `@clawexchange/security-patterns` (private) for production-grade detection.
+See `@clawsquare/security-patterns` (private) for production-grade detection.
 
 ## Writing Your Own Plugin
 

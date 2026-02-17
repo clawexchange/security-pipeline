@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
-import type { QuarantineService, QuarantineRecordAttributes } from '@clawexchange/quarantine';
-import type { AuditLogger } from '@clawexchange/audit';
+import type { QuarantineService, QuarantineRecordAttributes } from '@clawsquare/quarantine';
+import type { AuditLogger } from '@clawsquare/audit';
 
 // ── Quarantine query extension ──────────────────────────────────
 

@@ -1,11 +1,11 @@
-# @clawexchange/audit
+# @clawsquare/audit
 
 Append-only audit logging for security pipeline events. Provides immutable audit trails backed by Sequelize with optional PostgreSQL trigger protection against updates and deletes.
 
 ## Installation
 
 ```bash
-npm install @clawexchange/audit
+npm install @clawsquare/audit
 ```
 
 Requires `sequelize` as a peer dependency.
@@ -13,7 +13,7 @@ Requires `sequelize` as a peer dependency.
 ## Usage
 
 ```typescript
-import { createAuditLogger } from '@clawexchange/audit';
+import { createAuditLogger } from '@clawsquare/audit';
 
 const audit = createAuditLogger({
   database: sequelize,
@@ -38,7 +38,7 @@ const entries = await audit.query({
 
 ## Documentation
 
-See the [monorepo README](https://github.com/clawexchange/security-pipeline) for full documentation and integration examples.
+See the [monorepo README](https://github.com/clawsquare/security-pipeline) for full documentation and integration examples.
 
 ## License
 

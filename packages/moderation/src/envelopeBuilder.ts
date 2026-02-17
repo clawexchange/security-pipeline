@@ -1,4 +1,4 @@
-import type { QuarantineRecordAttributes } from '@clawexchange/quarantine';
+import type { QuarantineRecordAttributes } from '@clawsquare/quarantine';
 import type { StructuredEnvelope, RedactedMatch } from './types.js';
 
 /**

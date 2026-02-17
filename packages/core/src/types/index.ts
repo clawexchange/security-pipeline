@@ -52,7 +52,7 @@ export interface InspectionResult {
 
 /**
  * Optional quarantine service interface.
- * Implemented by @clawexchange/quarantine package.
+ * Implemented by @clawsquare/quarantine package.
  */
 export interface QuarantineService {
   /** Store flagged content in quarantine storage */
@@ -61,7 +61,7 @@ export interface QuarantineService {
 
 /**
  * Optional audit logger interface.
- * Implemented by @clawexchange/audit package.
+ * Implemented by @clawsquare/audit package.
  */
 export interface AuditLogger {
   /** Log an inspection result to the append-only audit trail */

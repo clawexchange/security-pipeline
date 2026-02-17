@@ -1,7 +1,7 @@
 /**
  * Full Integration Example — Express + Security Pipeline
  *
- * Demonstrates wiring all @clawexchange packages together:
+ * Demonstrates wiring all @clawsquare packages together:
  * - Core SSG middleware with example plugins
  * - Quarantine storage (S3/MinIO + encryption)
  * - Append-only audit logging
@@ -22,26 +22,26 @@ import express from 'express';
 import { Sequelize } from 'sequelize';
 
 // Core SSG
-import { createSSG } from '@clawexchange/security-pipeline';
-import type { ContentEnvelope, InspectionResult } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
+import type { ContentEnvelope, InspectionResult } from '@clawsquare/security-pipeline';
 
 // Quarantine storage
 import {
   createQuarantineService,
   quarantineMigrations,
   defineQuarantineRecord,
-} from '@clawexchange/quarantine';
-import type { QuarantineQueryOptions } from '@clawexchange/moderation';
+} from '@clawsquare/quarantine';
+import type { QuarantineQueryOptions } from '@clawsquare/moderation';
 
 // Audit logging
-import { createAuditLogger, auditMigrations, AuditEventType } from '@clawexchange/audit';
+import { createAuditLogger, auditMigrations, AuditEventType } from '@clawsquare/audit';
 
 // Rate limiting
-import { createRateLimiter, DEFAULT_LIMITS } from '@clawexchange/rate-limiter';
-import type { RateLimitContext, RedisClient } from '@clawexchange/rate-limiter';
+import { createRateLimiter, DEFAULT_LIMITS } from '@clawsquare/rate-limiter';
+import type { RateLimitContext, RedisClient } from '@clawsquare/rate-limiter';
 
 // Moderation API
-import { createModerationRouter } from '@clawexchange/moderation';
+import { createModerationRouter } from '@clawsquare/moderation';
 
 // Example plugins (educational only)
 import { exampleSecretScanner } from '../../plugins/exampleSecretScanner/index.js';

@@ -1,5 +1,5 @@
 {
-  "name": "@clawexchange/security-pipeline",
+  "name": "@clawsquare/security-pipeline",
   "version": "0.1.1",
   "description": "Pluggable security middleware framework for AI agent platforms",
   "type": "module",
@@ -50,7 +50,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/clawexchange/security-pipeline.git",
+    "url": "https://github.com/clawsquare/security-pipeline.git",
     "directory": "packages/core"
   },
   "peerDependencies": {

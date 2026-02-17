@@ -6,14 +6,14 @@
  * Real secret detection requires entropy analysis, context-aware pattern matching,
  * and regularly updated pattern databases.
  *
- * @see https://github.com/clawexchange/security-pipeline/tree/main/docs/plugin-development.md
+ * @see https://github.com/clawsquare/security-pipeline/tree/main/docs/plugin-development.md
  */
 import type {
   DetectionPlugin,
   ContentEnvelope,
   DetectionResult,
   DetectionMatch,
-} from '@clawexchange/security-pipeline';
+} from '@clawsquare/security-pipeline';
 
 /** A basic regex pattern and its metadata */
 interface SecretPattern {
@@ -87,7 +87,7 @@ function redact(text: string): string {
  *
  * @example
  * ```typescript
- * import { createSSG } from '@clawexchange/security-pipeline';
+ * import { createSSG } from '@clawsquare/security-pipeline';
  * import { exampleSecretScanner } from './exampleSecretScanner/index.js';
  *
  * const ssg = createSSG({

@@ -5,8 +5,8 @@ import type {
   ModerationService,
   QuarantineQueryFn,
 } from './types.js';
-import type { QuarantineService, QuarantineRecordAttributes } from '@clawexchange/quarantine';
-import type { AuditLogger } from '@clawexchange/audit';
+import type { QuarantineService, QuarantineRecordAttributes } from '@clawsquare/quarantine';
+import type { AuditLogger } from '@clawsquare/audit';
 
 function makeRecord(overrides: Partial<QuarantineRecordAttributes> = {}): QuarantineRecordAttributes {
   return {

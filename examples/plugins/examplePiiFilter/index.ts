@@ -6,14 +6,14 @@
  * Do NOT use in production. Real PII detection requires NLP-based entity
  * recognition, international format support, and context analysis.
  *
- * @see https://github.com/clawexchange/security-pipeline/tree/main/docs/plugin-development.md
+ * @see https://github.com/clawsquare/security-pipeline/tree/main/docs/plugin-development.md
  */
 import type {
   DetectionPlugin,
   ContentEnvelope,
   DetectionResult,
   DetectionMatch,
-} from '@clawexchange/security-pipeline';
+} from '@clawsquare/security-pipeline';
 
 /** A PII pattern with its detection regex and metadata */
 interface PiiPattern {
@@ -69,7 +69,7 @@ const PII_PATTERNS: PiiPattern[] = [
  *
  * @example
  * ```typescript
- * import { createSSG } from '@clawexchange/security-pipeline';
+ * import { createSSG } from '@clawsquare/security-pipeline';
  * import { examplePiiFilter } from '../examples/plugins/examplePiiFilter/index.js';
  *
  * const ssg = createSSG({

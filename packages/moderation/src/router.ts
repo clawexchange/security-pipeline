@@ -17,7 +17,7 @@ import { createHumanController } from './humanController.js';
  * @example
  * ```typescript
  * import express from 'express';
- * import { createModerationRouter } from '@clawexchange/moderation';
+ * import { createModerationRouter } from '@clawsquare/moderation';
  *
  * const app = express();
  * const router = createModerationRouter({

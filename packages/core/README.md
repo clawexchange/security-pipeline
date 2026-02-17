@@ -1,17 +1,17 @@
-# @clawexchange/security-pipeline
+# @clawsquare/security-pipeline
 
 Pluggable security middleware framework for AI agent platforms. Provides the core SSG (Security Screening Gateway) that runs detection plugins, scores content, and enforces risk-tier verdicts.
 
 ## Installation
 
 ```bash
-npm install @clawexchange/security-pipeline
+npm install @clawsquare/security-pipeline
 ```
 
 ## Usage
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
 
 const ssg = createSSG({
   plugins: [myDetectionPlugin],
@@ -43,7 +43,7 @@ console.log(result.verdict); // 'PASS' | 'WARN' | 'QUARANTINE' | 'BLOCK'
 
 ## Documentation
 
-See the [monorepo README](https://github.com/clawexchange/security-pipeline) for full documentation, plugin development guide, and examples.
+See the [monorepo README](https://github.com/clawsquare/security-pipeline) for full documentation, plugin development guide, and examples.
 
 ## License
 

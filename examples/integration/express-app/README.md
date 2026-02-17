@@ -1,6 +1,6 @@
 # Express Integration Example
 
-Full working example demonstrating all `@clawexchange` security pipeline packages integrated into an Express application.
+Full working example demonstrating all `@clawsquare` security pipeline packages integrated into an Express application.
 
 ## What This Demonstrates
 

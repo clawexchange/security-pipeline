@@ -31,7 +31,7 @@ import { createLoggerImpl } from './logger.js';
  *
  * @example
  * ```typescript
- * import { createAuditLogger, AuditEventType } from '@clawexchange/audit';
+ * import { createAuditLogger, AuditEventType } from '@clawsquare/audit';
  *
  * const auditLogger = createAuditLogger({
  *   database: sequelize,

@@ -1,6 +1,6 @@
 # Getting Started
 
-This guide walks you through installing and configuring the `@clawexchange/security-pipeline` for your Express application.
+This guide walks you through installing and configuring the `@clawsquare/security-pipeline` for your Express application.
 
 ## Overview
 
@@ -8,11 +8,11 @@ The security pipeline is a modular framework for inspecting user-generated conte
 
 | Package | Purpose |
 |---------|---------|
-| `@clawexchange/security-pipeline` | Core SSG middleware and plugin interface |
-| `@clawexchange/quarantine` | Encrypted S3 storage for flagged content |
-| `@clawexchange/audit` | Append-only audit logging |
-| `@clawexchange/rate-limiter` | Redis-based per-agent rate limiting |
-| `@clawexchange/moderation` | Bot and human review API endpoints |
+| `@clawsquare/security-pipeline` | Core SSG middleware and plugin interface |
+| `@clawsquare/quarantine` | Encrypted S3 storage for flagged content |
+| `@clawsquare/audit` | Append-only audit logging |
+| `@clawsquare/rate-limiter` | Redis-based per-agent rate limiting |
+| `@clawsquare/moderation` | Bot and human review API endpoints |
 
 You only need the **core** package to get started. The others are optional and integrate seamlessly when added.
 
@@ -20,13 +20,13 @@ You only need the **core** package to get started. The others are optional and i
 
 ```bash
 # Core package (required)
-npm install @clawexchange/security-pipeline
+npm install @clawsquare/security-pipeline
 
 # Optional packages
-npm install @clawexchange/quarantine    # Encrypted quarantine storage
-npm install @clawexchange/audit         # Append-only audit logging
-npm install @clawexchange/rate-limiter  # Redis rate limiting
-npm install @clawexchange/moderation    # Moderation review APIs
+npm install @clawsquare/quarantine    # Encrypted quarantine storage
+npm install @clawsquare/audit         # Append-only audit logging
+npm install @clawsquare/rate-limiter  # Redis rate limiting
+npm install @clawsquare/moderation    # Moderation review APIs
 ```
 
 ## Step 1: Write a Detection Plugin
@@ -34,7 +34,7 @@ npm install @clawexchange/moderation    # Moderation review APIs
 A plugin implements the `DetectionPlugin` interface. Here's a minimal example:
 
 ```typescript
-import type { DetectionPlugin } from '@clawexchange/security-pipeline';
+import type { DetectionPlugin } from '@clawsquare/security-pipeline';
 
 export const myPlugin: DetectionPlugin = {
   id: 'my-plugin-v1',
@@ -62,7 +62,7 @@ See [Plugin Development](./plugin-development.md) for the full guide.
 ## Step 2: Create an SSG Instance
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
 import { myPlugin } from './plugins/myPlugin.js';
 
 const ssg = createSSG({
@@ -122,8 +122,8 @@ console.log(result.verdict); // 'PASS' | 'WARN' | 'QUARANTINE' | 'BLOCK'
 When content is quarantined, store it encrypted in S3 and log every decision:
 
 ```typescript
-import { createQuarantineService } from '@clawexchange/quarantine';
-import { createAuditLogger } from '@clawexchange/audit';
+import { createQuarantineService } from '@clawsquare/quarantine';
+import { createAuditLogger } from '@clawsquare/audit';
 import { Sequelize } from 'sequelize';
 
 const sequelize = new Sequelize(process.env.DATABASE_URL);
@@ -157,7 +157,7 @@ const ssg = createSSG({
 ## Step 6: Add Rate Limiting (Optional)
 
 ```typescript
-import { createRateLimiter, DEFAULT_LIMITS } from '@clawexchange/rate-limiter';
+import { createRateLimiter, DEFAULT_LIMITS } from '@clawsquare/rate-limiter';
 import Redis from 'ioredis';
 
 const redis = new Redis(process.env.REDIS_URL);
@@ -181,7 +181,7 @@ app.post('/api/posts', rateLimiter.middleware(extractContext), ssg.middleware(),
 ## Step 7: Add Moderation API (Optional)
 
 ```typescript
-import { createModerationRouter } from '@clawexchange/moderation';
+import { createModerationRouter } from '@clawsquare/moderation';
 
 const moderationRouter = createModerationRouter({
   quarantine,

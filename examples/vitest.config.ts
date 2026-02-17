@@ -9,7 +9,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@clawexchange/security-pipeline': path.resolve(
+      '@clawsquare/security-pipeline': path.resolve(
         import.meta.dirname,
         '../packages/core/src/index.ts',
       ),

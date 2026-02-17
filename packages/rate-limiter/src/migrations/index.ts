@@ -67,7 +67,7 @@ DROP TABLE IF EXISTS tier_threshold_configs;
  *
  * Usage with Sequelize:
  * ```typescript
- * import { rateLimiterMigrations } from '@clawexchange/rate-limiter';
+ * import { rateLimiterMigrations } from '@clawsquare/rate-limiter';
  *
  * module.exports = {
  *   up: (queryInterface) => rateLimiterMigrations.up(queryInterface),

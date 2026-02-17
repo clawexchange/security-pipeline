@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { exampleSecretScanner } from './index.js';
-import type { ContentEnvelope } from '@clawexchange/security-pipeline';
+import type { ContentEnvelope } from '@clawsquare/security-pipeline';
 
 function envelope(text: string): ContentEnvelope {
   return { text, contentType: 'POST' };

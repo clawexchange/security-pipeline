@@ -1,5 +1,5 @@
-import { AuditEventType } from '@clawexchange/audit';
-import type { QuarantineRecordAttributes } from '@clawexchange/quarantine';
+import { AuditEventType } from '@clawsquare/audit';
+import type { QuarantineRecordAttributes } from '@clawsquare/quarantine';
 import { buildEnvelope } from './envelopeBuilder.js';
 import type {
   ModerationService,

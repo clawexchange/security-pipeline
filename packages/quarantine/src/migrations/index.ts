@@ -5,7 +5,7 @@ import type { QuarantineMigrations } from '../types.js';
  *
  * Usage:
  * ```typescript
- * import { quarantineMigrations } from '@clawexchange/quarantine';
+ * import { quarantineMigrations } from '@clawsquare/quarantine';
  * await quarantineMigrations.up(queryInterface, Sequelize);
  * ```
  */

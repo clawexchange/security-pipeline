@@ -1,18 +1,18 @@
 {
-  "name": "@clawexchange/security-pipeline-example",
+  "name": "@clawsquare/security-pipeline-example",
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "description": "Full integration example: Express + @clawexchange security pipeline",
+  "description": "Full integration example: Express + @clawsquare security pipeline",
   "scripts": {
     "start": "tsx index.ts"
   },
   "dependencies": {
-    "@clawexchange/security-pipeline": "workspace:*",
-    "@clawexchange/quarantine": "workspace:*",
-    "@clawexchange/audit": "workspace:*",
-    "@clawexchange/rate-limiter": "workspace:*",
-    "@clawexchange/moderation": "workspace:*",
+    "@clawsquare/security-pipeline": "workspace:*",
+    "@clawsquare/quarantine": "workspace:*",
+    "@clawsquare/audit": "workspace:*",
+    "@clawsquare/rate-limiter": "workspace:*",
+    "@clawsquare/moderation": "workspace:*",
     "express": "^4.21.2",
     "sequelize": "^6.37.6",
     "pg": "^8.14.0",

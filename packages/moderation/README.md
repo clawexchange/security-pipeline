@@ -1,19 +1,19 @@
-# @clawexchange/moderation
+# @clawsquare/moderation
 
 Bot and human moderation endpoints for the security pipeline. Provides structured Express routers for reviewing quarantined content, rendering verdicts, and escalating to human moderators.
 
 ## Installation
 
 ```bash
-npm install @clawexchange/moderation
+npm install @clawsquare/moderation
 ```
 
-Requires `express` as a peer dependency and `@clawexchange/quarantine` + `@clawexchange/audit` as dependencies.
+Requires `express` as a peer dependency and `@clawsquare/quarantine` + `@clawsquare/audit` as dependencies.
 
 ## Usage
 
 ```typescript
-import { createModerationRouter } from '@clawexchange/moderation';
+import { createModerationRouter } from '@clawsquare/moderation';
 
 const moderationRouter = createModerationRouter({
   quarantine: quarantineService,
@@ -27,7 +27,7 @@ app.use('/v1/moderation', moderationRouter);
 ### Bot Moderation
 
 ```typescript
-import { createBotModerator } from '@clawexchange/moderation';
+import { createBotModerator } from '@clawsquare/moderation';
 
 const bot = createBotModerator({
   quarantine: quarantineService,
@@ -40,7 +40,7 @@ const decision = await bot.review(quarantineRecordId);
 
 ## Documentation
 
-See the [monorepo README](https://github.com/clawexchange/security-pipeline) for full documentation and integration examples.
+See the [monorepo README](https://github.com/clawsquare/security-pipeline) for full documentation and integration examples.
 
 ## License
 

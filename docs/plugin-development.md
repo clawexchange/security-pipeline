@@ -12,7 +12,7 @@ import type {
   ContentEnvelope,
   DetectionResult,
   DetectionMatch,
-} from '@clawexchange/security-pipeline';
+} from '@clawsquare/security-pipeline';
 ```
 
 ### DetectionPlugin
@@ -103,7 +103,7 @@ import type {
   ContentEnvelope,
   DetectionResult,
   DetectionMatch,
-} from '@clawexchange/security-pipeline';
+} from '@clawsquare/security-pipeline';
 
 export const myPlugin: DetectionPlugin = {
   id: 'my-plugin-v1',

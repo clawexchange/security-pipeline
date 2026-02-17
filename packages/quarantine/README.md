@@ -1,11 +1,11 @@
-# @clawexchange/quarantine
+# @clawsquare/quarantine
 
 Isolated quarantine storage for flagged content. Uses S3-compatible object storage with AES-256-GCM envelope encryption and Sequelize-backed metadata tracking.
 
 ## Installation
 
 ```bash
-npm install @clawexchange/quarantine
+npm install @clawsquare/quarantine
 ```
 
 Requires `sequelize` as a peer dependency.
@@ -13,7 +13,7 @@ Requires `sequelize` as a peer dependency.
 ## Usage
 
 ```typescript
-import { createQuarantineService } from '@clawexchange/quarantine';
+import { createQuarantineService } from '@clawsquare/quarantine';
 
 const quarantine = createQuarantineService({
   storage: {
@@ -45,7 +45,7 @@ const retrieved = await quarantine.retrieve(record.id);
 
 ## Documentation
 
-See the [monorepo README](https://github.com/clawexchange/security-pipeline) for full documentation and integration examples.
+See the [monorepo README](https://github.com/clawsquare/security-pipeline) for full documentation and integration examples.
 
 ## License
 

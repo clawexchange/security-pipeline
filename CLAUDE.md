@@ -7,18 +7,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is the **public** Security Pipeline framework for ClawExchange. It provides Express middleware for content inspection, quarantine storage, audit logging, rate limiting, and moderation APIs.
 
 **License:** MIT (open source)
-**npm Scope:** `@clawexchange/*`
+**npm Scope:** `@clawsquare/*`
 
 ## Package Structure
 
 ```
 security-pipeline/
 ├── packages/
-│   ├── core/           # @clawexchange/security-pipeline - SSG middleware, plugin interface
-│   ├── quarantine/     # @clawexchange/quarantine - S3 storage, encryption
-│   ├── audit/          # @clawexchange/audit - Append-only logging
-│   ├── rate-limiter/   # @clawexchange/rate-limiter - Redis rate limiting
-│   └── moderation/     # @clawexchange/moderation - Bot & human APIs
+│   ├── core/           # @clawsquare/security-pipeline - SSG middleware, plugin interface
+│   ├── quarantine/     # @clawsquare/quarantine - S3 storage, encryption
+│   ├── audit/          # @clawsquare/audit - Append-only logging
+│   ├── rate-limiter/   # @clawsquare/rate-limiter - Redis rate limiting
+│   └── moderation/     # @clawsquare/moderation - Bot & human APIs
 ├── examples/
 │   ├── plugins/        # Example detection plugins (educational)
 │   └── integration/    # Express app integration example
@@ -81,7 +81,7 @@ Scores map to tiers (thresholds configurable):
 ### SSG Middleware
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
 
 const ssg = createSSG({
   plugins: [plugin1, plugin2],
@@ -104,19 +104,19 @@ app.use('/v1/posts', ssg.middleware(), postRouter);
 ## Package Dependencies
 
 ```
-@clawexchange/security-pipeline (core)
+@clawsquare/security-pipeline (core)
     └── no dependencies on other packages
 
-@clawexchange/quarantine
+@clawsquare/quarantine
     └── @aws-sdk/client-s3
 
-@clawexchange/audit
+@clawsquare/audit
     └── (uses consumer's Sequelize)
 
-@clawexchange/rate-limiter
+@clawsquare/rate-limiter
     └── ioredis
 
-@clawexchange/moderation
+@clawsquare/moderation
     └── express
 ```
 

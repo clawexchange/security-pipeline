@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { redactPattern, generateSummary, buildEnvelope } from './envelopeBuilder.js';
-import type { QuarantineRecordAttributes } from '@clawexchange/quarantine';
+import type { QuarantineRecordAttributes } from '@clawsquare/quarantine';
 
 describe('redactPattern', () => {
   it('fully redacts strings of 4 chars or fewer', () => {

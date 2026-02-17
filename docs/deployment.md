@@ -1,6 +1,6 @@
 # Deployment Guide
 
-Production deployment checklist and configuration for the `@clawexchange` security pipeline.
+Production deployment checklist and configuration for the `@clawsquare` security pipeline.
 
 ## Infrastructure Requirements
 
@@ -46,9 +46,9 @@ No environment variables required. Configuration is passed programmatically.
 Each package exports migrations that create required tables:
 
 ```typescript
-import { quarantineMigrations } from '@clawexchange/quarantine';
-import { auditMigrations } from '@clawexchange/audit';
-import { rateLimiterMigrations } from '@clawexchange/rate-limiter';
+import { quarantineMigrations } from '@clawsquare/quarantine';
+import { auditMigrations } from '@clawsquare/audit';
+import { rateLimiterMigrations } from '@clawsquare/rate-limiter';
 
 const qi = sequelize.getQueryInterface();
 

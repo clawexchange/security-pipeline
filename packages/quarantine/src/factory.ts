@@ -12,7 +12,7 @@ const DEFAULT_EXPIRY_HOURS = 72;
  *
  * @example
  * ```typescript
- * import { createQuarantineService } from '@clawexchange/quarantine';
+ * import { createQuarantineService } from '@clawsquare/quarantine';
  *
  * const quarantine = createQuarantineService({
  *   storage: {

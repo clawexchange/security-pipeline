@@ -1,15 +1,15 @@
 # API Reference
 
-Complete type and function reference for all `@clawexchange` security pipeline packages.
+Complete type and function reference for all `@clawsquare` security pipeline packages.
 
-## @clawexchange/security-pipeline (Core)
+## @clawsquare/security-pipeline (Core)
 
 ### `createSSG(config: SSGConfig): SSGInstance`
 
 Creates an SSG (Synchronous Safety Gate) instance.
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
 
 const ssg = createSSG({
   plugins: [myPlugin],
@@ -93,7 +93,7 @@ interface PluginResult {
 
 ---
 
-## @clawexchange/quarantine
+## @clawsquare/quarantine
 
 ### `createQuarantineService(config: QuarantineConfig): QuarantineService`
 
@@ -151,7 +151,7 @@ interface QuarantineMetadata {
 
 ---
 
-## @clawexchange/audit
+## @clawsquare/audit
 
 ### `createAuditLogger(config: AuditConfig): AuditLogger`
 
@@ -239,7 +239,7 @@ interface AuditLogEntry {
 
 ---
 
-## @clawexchange/rate-limiter
+## @clawsquare/rate-limiter
 
 ### `createRateLimiter(config: RateLimiterConfig): RateLimiter`
 
@@ -307,7 +307,7 @@ interface RateLimitContext {
 
 ---
 
-## @clawexchange/moderation
+## @clawsquare/moderation
 
 ### `createModerationRouter(config: ModerationConfig): Router`
 

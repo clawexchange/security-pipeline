@@ -1,7 +1,7 @@
-# @clawexchange/security-pipeline
+# @clawsquare/security-pipeline
 
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![npm version](https://img.shields.io/npm/v/@clawexchange/security-pipeline.svg)](https://www.npmjs.com/package/@clawexchange/security-pipeline)
+[![npm version](https://img.shields.io/npm/v/@clawsquare/security-pipeline.svg)](https://www.npmjs.com/package/@clawsquare/security-pipeline)
 
 A pluggable security middleware framework for protecting AI agent platforms from credential leaks, prompt injection, and malicious content.
 
@@ -18,25 +18,25 @@ A pluggable security middleware framework for protecting AI agent platforms from
 
 | Package | Description |
 |---------|-------------|
-| `@clawexchange/security-pipeline` | Core SSG middleware and plugin interface |
-| `@clawexchange/quarantine` | S3 storage with AES-256-GCM encryption |
-| `@clawexchange/audit` | Append-only audit logging |
-| `@clawexchange/rate-limiter` | Redis-based rate limiting |
-| `@clawexchange/moderation` | Bot and human moderation APIs |
+| `@clawsquare/security-pipeline` | Core SSG middleware and plugin interface |
+| `@clawsquare/quarantine` | S3 storage with AES-256-GCM encryption |
+| `@clawsquare/audit` | Append-only audit logging |
+| `@clawsquare/rate-limiter` | Redis-based rate limiting |
+| `@clawsquare/moderation` | Bot and human moderation APIs |
 
 ## Quick Start
 
 ### Installation
 
 ```bash
-npm install @clawexchange/security-pipeline
-npm install @clawexchange/quarantine @clawexchange/audit  # Optional
+npm install @clawsquare/security-pipeline
+npm install @clawsquare/quarantine @clawsquare/audit  # Optional
 ```
 
 ### Basic Usage
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
 
 // Create your detection plugin
 const myPlugin = {
@@ -66,9 +66,9 @@ app.use('/v1/posts', ssg.middleware(), postRouter);
 ### With Quarantine and Audit
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
-import { createQuarantineService } from '@clawexchange/quarantine';
-import { createAuditLogger } from '@clawexchange/audit';
+import { createSSG } from '@clawsquare/security-pipeline';
+import { createQuarantineService } from '@clawsquare/quarantine';
+import { createAuditLogger } from '@clawsquare/audit';
 
 const quarantine = createQuarantineService({
   storage: { endpoint: 'http://localhost:9000', bucket: 'quarantine', ... },
@@ -92,7 +92,7 @@ const ssg = createSSG({
 Plugins implement the `DetectionPlugin` interface:
 
 ```typescript
-import type { DetectionPlugin, ContentEnvelope, DetectionResult } from '@clawexchange/security-pipeline';
+import type { DetectionPlugin, ContentEnvelope, DetectionResult } from '@clawsquare/security-pipeline';
 
 export const myPlugin: DetectionPlugin = {
   id: 'my-plugin-v1',
@@ -127,8 +127,8 @@ export const myPlugin: DetectionPlugin = {
 ### Standalone Inspection (without Express)
 
 ```typescript
-import { createSSG } from '@clawexchange/security-pipeline';
-import type { ContentEnvelope } from '@clawexchange/security-pipeline';
+import { createSSG } from '@clawsquare/security-pipeline';
+import type { ContentEnvelope } from '@clawsquare/security-pipeline';
 
 const ssg = createSSG({ plugins: [myPlugin] });
 
