@@ -1,6 +1,6 @@
 {
   "name": "@clawsquare/rate-limiter",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Redis-based rate limiting for AI agent platforms with trust and penalty multipliers",
   "type": "module",
   "main": "./dist/index.js",

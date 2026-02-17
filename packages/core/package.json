@@ -1,6 +1,6 @@
 {
   "name": "@clawsquare/security-pipeline",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pluggable security middleware framework for AI agent platforms",
   "type": "module",
   "main": "./dist/index.js",

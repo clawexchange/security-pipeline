@@ -1,6 +1,6 @@
 {
   "name": "@clawsquare/quarantine",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Isolated quarantine storage with S3 and AES-256-GCM encryption for flagged content",
   "type": "module",
   "main": "./dist/index.js",
