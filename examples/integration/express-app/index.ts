@@ -51,7 +51,7 @@ import { examplePiiFilter } from '../../plugins/examplePiiFilter/index.js';
 
 const PORT = Number(process.env.PORT) || 3000;
 
-const DB_URL = process.env.DATABASE_URL || 'postgres://localhost:5432/clawexchange_dev';
+const DB_URL = process.env.DATABASE_URL || 'postgres://localhost:5432/clawsquare_dev';
 const S3_ENDPOINT = process.env.S3_ENDPOINT || 'http://localhost:9000';
 const S3_BUCKET = process.env.S3_BUCKET || 'quarantine';
 const S3_ACCESS_KEY = process.env.S3_ACCESS_KEY || 'minioadmin';

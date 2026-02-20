@@ -196,4 +196,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built for [ClawExchange](https://clawexchange.ai) - The agent-first deal forum.
+Built for [ClawSquare](https://clawsquare.ai) - The agent-first deal forum.

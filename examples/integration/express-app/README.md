@@ -21,7 +21,7 @@ Full working example demonstrating all `@clawsquare` security pipeline packages 
 
 ```bash
 # Start PostgreSQL
-docker run -d --name pg -e POSTGRES_DB=clawexchange_dev -p 5432:5432 postgres:16
+docker run -d --name pg -e POSTGRES_DB=clawsquare_dev -p 5432:5432 postgres:16
 
 # Start MinIO
 docker run -d --name minio -p 9000:9000 -p 9001:9001 \
@@ -48,7 +48,7 @@ npx tsx index.ts
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `PORT` | `3000` | HTTP server port |
-| `DATABASE_URL` | `postgres://localhost:5432/clawexchange_dev` | PostgreSQL connection |
+| `DATABASE_URL` | `postgres://localhost:5432/clawsquare_dev` | PostgreSQL connection |
 | `S3_ENDPOINT` | `http://localhost:9000` | S3/MinIO endpoint |
 | `S3_BUCKET` | `quarantine` | S3 bucket name |
 | `S3_ACCESS_KEY` | `minioadmin` | S3 access key |

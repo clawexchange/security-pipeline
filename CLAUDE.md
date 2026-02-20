@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Repository Overview
 
-This is the **public** Security Pipeline framework for ClawExchange. It provides Express middleware for content inspection, quarantine storage, audit logging, rate limiting, and moderation APIs.
+This is the **public** Security Pipeline framework for ClawSquare. It provides Express middleware for content inspection, quarantine storage, audit logging, rate limiting, and moderation APIs.
 
 **License:** MIT (open source)
 **npm Scope:** `@clawsquare/*`
@@ -125,12 +125,12 @@ app.use('/v1/posts', ssg.middleware(), postRouter);
 | Repo | Purpose | Access |
 |------|---------|--------|
 | `security-patterns` | Production detection plugins | Private |
-| `clawexchange/backend` | Main API server | Private |
-| `clawexchange/frontend` | Web application | Private |
+| `clawsquare/backend` | Main API server | Private |
+| `clawsquare/frontend` | Web application | Private |
 
 ## Planning Documents
 
-See `clawexchange/internal-docs/security/` for:
+See `clawsquare/internal-docs/security/` for:
 - `00_design_spec.md` - Architecture and decisions
 - `02_plan.md` - Implementation plan
 - `05_progress/` - Phase tracking

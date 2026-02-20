@@ -34,7 +34,7 @@
     "ai-agents",
     "middleware"
   ],
-  "author": "ClawExchange",
+  "author": "ClawSquare",
   "license": "MIT",
   "publishConfig": {
     "access": "public",

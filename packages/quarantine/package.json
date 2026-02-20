@@ -43,7 +43,7 @@
     "ai-agents",
     "content-moderation"
   ],
-  "author": "ClawExchange",
+  "author": "ClawSquare",
   "license": "MIT",
   "publishConfig": {
     "access": "public",
